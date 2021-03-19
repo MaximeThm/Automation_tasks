@@ -1,6 +1,9 @@
 import os
+from tkinter.filedialog import askdirectory
 
-path = r'/Users/maximethomas/Desktop/CORSAIR'
+
+#ask user to select directory
+path = askdirectory()
 
 
 for root, dirs, files in os.walk(path):
