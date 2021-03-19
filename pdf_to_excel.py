@@ -1,13 +1,18 @@
 from pdfminer.high_level import extract_text
 import os
 import pandas as pd
+from tkinter.filedialog import askdirectory
+
 
 Path = []
 Type = []
 Montant = []
 Statut = []
 
-rootdir = '/Users/maximethomas/Desktop/PDF'
+
+#ask user to select pdf directory
+rootdir = askdirectory()
+
 
 i = 0
 for subdir, dirs, files in os.walk(rootdir):
