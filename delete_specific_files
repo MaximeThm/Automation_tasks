@@ -1,0 +1,11 @@
+import os
+
+path = "you path"
+word = ""
+
+for (dirpath, dirnames, filenames) in os.walk(path):
+    for filename in filenames:
+        if word in filename:
+            filename = os.sep.join([dirpath, filename])
+            os.remove(filename)
+            print(filename, " DELETED")
